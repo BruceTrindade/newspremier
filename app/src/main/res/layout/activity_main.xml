@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/blue">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="PREMIER NEWS"
-        android:textColor="@color/blue"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:background="@color/grey"
+
         android:padding="10dp"
         android:textAlignment="center"/>
 
@@ -36,8 +37,8 @@
             android:ems="10"
             android:hint="Buscar"
             android:textStyle="bold"
-            android:textColor="@color/grey"
-            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:padding="10dp"
             android:background="@drawable/shape_background"
             android:layout_column="0"

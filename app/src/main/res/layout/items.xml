@@ -15,7 +15,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="250dp">
 
             <ProgressBar
                 android:layout_width="30dp"
@@ -53,26 +53,41 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tvSource"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:padding="10dp"
+                    android:text="Source"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/shareNews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Source"
-                    android:padding="10dp"
-                    android:textSize="16dp"
-                    android:ems="15"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:id="@+id/tvSource"/>
+                    android:gravity="center"
+                    android:layout_column="1"
+                    android:paddingRight="30dp"
+                    android:background="@drawable/shape_background"
+                    android:drawableRight="@drawable/ic_share_24"
+                    android:layout_row="0"/>
+
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvDate"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
-                    android:text="Date"
-                    android:padding="10dp"
                     android:gravity="right"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:text="Date"
                     android:textColor="@color/white"
-                    android:id="@+id/tvDate"/>
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+
 
             </LinearLayout>
         </FrameLayout>

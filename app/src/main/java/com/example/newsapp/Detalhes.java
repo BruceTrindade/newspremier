@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -16,7 +18,7 @@ public class Detalhes extends AppCompatActivity {
     TextView tvTitle, tvSource, tvTime, tvDesc;
     ImageView imageView;
     WebView webView;
-
+    ProgressBar loader;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +31,10 @@ public class Detalhes extends AppCompatActivity {
         tvTime = findViewById(R.id.tvDate);
         tvDesc = findViewById(R.id.tvDesc);
 
-
         webView = findViewById(R.id.webView);
+
+        loader = findViewById(R.id.webViewLoader);
+        loader.setVisibility(View.VISIBLE);
 
         Intent intent = getIntent();
         String title = intent.getStringExtra("title");
@@ -53,7 +57,9 @@ public class Detalhes extends AppCompatActivity {
         webView.setScrollBarStyle(imageView.SCROLLBARS_INSIDE_OVERLAY);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(url);
-
+        if(webView.isShown()){
+                loader.setVisibility(View.INVISIBLE);
+        }
 
     }
 }
